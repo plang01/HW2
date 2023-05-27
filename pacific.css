@@ -1,3 +1,15 @@
+/*
+File: pacific.css
+GUI Assignment: Replicate the style of site using CSS
+Phat Lang, UMass Lowell Computer Science, Phat_Lang@student.uml.edu
+What to submit: Readme file with Github URL and link to repository, a zip file contains the code 
+PART 2: Replicate a site as given strictly with css and is prohibit from modifying the html file
+Copyright (c) 2023 by Phat Lang. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author. Updated by Phat Lang on May 27 at 5:44 p.m
+*/
+
+
+
 /* Reset */
 *{
     padding: 0px;
@@ -10,7 +22,7 @@ header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 body {
 	background-image: url("ptrbackground.jpg");
 	 color: #666666;
-	/* background-color:#00569f; */ 
+	background-color:#00569f; 
 	font-family: Arial, Helvetica, sans-serif;
 	position:relative;
 	padding-top:10px;
@@ -19,88 +31,35 @@ body {
 
 /* Main Area */
 #wrapper{
-	/* background:cyan; */
-	/* display:flex; */
 	width:80%;
 	min-width: 600px;
-	/* background:red; */
 	margin:auto;
-	/* position:relative; */
 	height:100%;
-}
-
-nav{
-	background:black;
-	/* padding-bottom: 70px; */
-	/* display:flex; */
-	margin-right:1200px;
-	/* height:inherit; */
-	/* position:fixed; */
-	/* float:left; 
-	object-fit: cover;
-	height:500px;
-	align-items: stretch;
-	padding-top:10px;
-	min-width:190px;
-	list-style-type: none; */
-	/* font-size:xx-large; */
-}
-
-nav ul {
-	/* display:inline-block; */
-	float:left;
-	/* position:inherit; */
+	display:grid;
+	grid-template-columns:190px 1fr;
+	grid-template-rows: 55px 1fr 50px;
+	grid-template-areas:
+	"heading heading heading"
+	"sidebar main main"
+	"sidebar footer footer";
 	background:cyan;
-	/* object-fit: cover; */
-	padding-top:10px;
-	min-width:190px;
-	/* height:100%; */
-	list-style-type: none;
-	/* padding-bottom:572px; */
-	/* text-align: bottom; */
-	/* position:absolute; */
-	height:inherit;
-
-	/* Test */
-	/* list-style-type: none;
-	display:block;
-	margin: 0;
-	padding: 0;
-	min-width: 100px;
-	float:left;
-	background-color: #f1f1f1;
-	position: absolute;
-	height: 100%;
-	overflow: auto; */
 }
 
-/* Orgiginal Code */
-/* nav a:visited {
+/* Navigation Bar */
+nav ul {
+	grid-area:sidebar;
+	background:cyan;
+	padding-top:10px;
+	min-width:190px;
+	list-style-type: none;
+}
+
+nav a:visited {
 	color: #344873;
-} */
+}
 
 nav a:hover {
 	color: #FFFFFF;
-}
-header{
-	background-image: url(sunset.jpg);
-	/* background:purple; */
-	background-repeat:no-repeat;
-	background-position:right;
-	background-size:20% 100%;
-	min-width:600px;
-}
-h1 {
-	margin-bottom: 0;
-	margin-top:0;
-	padding: 10px;
-	background-image: url(sunset.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size:cover;
-	/* height:100%; */
-	width:79%;
-	color:white;
 }
 
 /* Navigation Link */
@@ -109,78 +68,66 @@ li a{
 	color:#344873;
 	font-size:larger;
 	font-weight:bold;
-	/* background:peru; */
 	padding-left: 10px;
-	/* padding-top:30px; */
 }
 
-/* nav, #content{
-	display:flex;
-	flex-direction: column;
-} */
+/* Site header */
+header{
+	grid-area:heading;
+	/* Two background of the same image, this one display left side of the image */
+	background-image: url(sunset.jpg);
+	background-repeat:no-repeat;
+	background-position:right;
+	background-size:20% 100%;
+	min-width:600px;
+}
 
-/* Contents */
+/* Heading */
+h1 {
+	margin-bottom: 0;
+	margin-top:0;
+	padding: 10px;
+	/* Using same background but this one locates on the right which shows the sunset*/
+	background-image: url(sunset.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+	width:79%;
+	color:white;
+}
+
+/* Main Contents */
 #content{
-	background:purple;
-	/* display: inline-block; */
+	background:white;
+	grid-area:main;
 }
 
 #content img{
-	background:silver;
 	padding-left:30px;
 	padding-right:11px;
-	/* width:25%; */
 	float:left;
 }
-
+/* Resort Name */
 span{
-	color:#344873;
+	color:#00569f;
 	font-weight:bold;
-	/* font-size: */
 }
 
 #content p{
-	background:navy;
-	/* padding-top:20px; */
-	margin-left:36.6%;
-	/* margin-left:50%; */
-	/* margin-left:35.5%; */
-	/* margin-left:33px; */
-	/* text-align: right; */
+	margin-left:7%;
 	padding-right:5px;
 	padding-bottom:10px;
 	font-size:14.5px;
 }
 
 #content ul{
-	/* background:green; */
-	/* padding-top:5px; */
-	margin-left:36.6%;
+	margin-left:15%;
 	padding-bottom:20px;
-	/* list-style-image: url(marker.gif);
-	list-style-position: inside;
-	margin-left:47.8%; */
-	/* padding-left:25px; */
-	/* margin-left:18.6%; */
-	/* margin-left:10.6%; */
 }
-
+/* Entertainment list with custom bulleted list */
 #content li{
-	/* background:paleturquoise; */
-	/* background-image:url(marker.gif); */
-	/* background-repeat:no-repeat; */
-	/* background-attachment:fixed; */
-	/* background-position:auto auto; */
-	/* max-width:600px; */
 	list-style-image: url(marker.gif);
 	list-style-position: inside;
-	/* padding-bottom:10px; */
-	/* margin-left:47.8%; */
-	/* background-size:800px; */
-	/* margin-left:36.6%; */
-	/* margin-left:48%; */
-	/* text-indent:20px; */
-	/* background-size:20% 100%; */
 }
 /* Enjoy Nature in Luxury */
 h2 {
@@ -188,55 +135,31 @@ h2 {
 	text-indent: 30px;
 	line-height: 70px;
 	background:white;
-	/* font-size:132%; */
 }
 
 h1,h2 {
 	font-family: Georgia, "Times New Roman", serif;
 }
 
-
+/* Contact Informations */
 #contact {
-	background:violet;
 	font-size: 90%;
-	/* margin-left:18.6%; */
-	margin-left:36.6%;
+	margin-left:7%;
 	padding-bottom:40px;
 
 }
 dt {
 	color: #000033;
 }
+
+/* Footer */
 footer{
 	 background:white;
-	/* display:inline;
-	font-family: Georgia, "Times New Roman", serif;
-	padding-right:57.5%;
-	float:right;
-	min-width:200px;
-	overflow:hidden;  */
-	/* padding-left:30px;  */
-	/* padding-right:80px; */
-	
-	/* text-align: justify;
-	position:absolute;
-	margin-left:20%; 
-	margin-right:55%;
-	text-overflow: clip; */
-
-	text-indent: 30px;
-	/* line-height: 70px; */
-
+	font-family: Georgia, "Times New Roman", serif; 
+	padding-left:20px;
+	grid-area:footer;
+	font-style:italic;
+	font-size:small;
 }
 
-footer a{
-	/* background:pink;
-	display:inline;
-	font-family: Georgia, "Times New Roman", serif; */
-	/* text-indent: 30px; */
-	/* line-height: 70px; */
-	/* padding-left: 40px; */
-	/* float:right; */
-	/* padding-right:60%; */
-}
 
