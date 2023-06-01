@@ -6,6 +6,7 @@ What to submit: Readme file with Github URL and link to repository, a zip file c
 PART 2: Replicate a site as given strictly with css and is prohibit from modifying the html file
 Copyright (c) 2023 by Phat Lang. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author. Updated by Phat Lang on May 27 at 5:44 p.m
+References/Citations: I used W3Schools to look up concepts and use a grid generator site "https://grid.layoutit.com/" to format my layout 
 */
 
 
@@ -21,7 +22,7 @@ header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 }
 body {
 	background-image: url("ptrbackground.jpg");
-	 color: #666666;
+	color: #666666;
 	background-color:#00569f; 
 	font-family: Arial, Helvetica, sans-serif;
 	position:relative;
@@ -42,20 +43,20 @@ body {
 	"heading heading heading"
 	"sidebar main main"
 	"sidebar footer footer";
-	background:cyan;
+	background:#77b7e4;
 }
 
 /* Navigation Bar */
 nav ul {
 	grid-area:sidebar;
-	background:cyan;
+	background:#77b7e4;
 	padding-top:10px;
 	min-width:190px;
 	list-style-type: none;
 }
 
 nav a:visited {
-	color: #344873;
+	color: #0a4395;
 }
 
 nav a:hover {
@@ -65,7 +66,7 @@ nav a:hover {
 /* Navigation Link */
 li a{
 	text-decoration: none;
-	color:#344873;
+	color:#0a4395;
 	font-size:larger;
 	font-weight:bold;
 	padding-left: 10px;
