@@ -102,6 +102,7 @@ h1 {
 #content{
 	background:white;
 	grid-area:main;
+	margin-bottom: -1px;
 }
 
 #content img{
