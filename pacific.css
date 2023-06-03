@@ -5,7 +5,7 @@ Phat Lang, UMass Lowell Computer Science, Phat_Lang@student.uml.edu
 What to submit: Readme file with Github URL and link to repository, a zip file contains the code 
 PART 2: Replicate a site as given strictly with css and is prohibit from modifying the html file
 Copyright (c) 2023 by Phat Lang. All rights reserved. May be freely copied or
-excerpted for educational purposes with credit to the author. Updated by Phat Lang on May 27 at 5:44 p.m
+excerpted for educational purposes with credit to the author. Updated by Phat Lang on June 3 at 5:57 p.m
 References/Citations: I used W3Schools to look up concepts and use a grid generator site "https://grid.layoutit.com/" to format my layout 
 */
 
@@ -22,6 +22,7 @@ header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 }
 body {
 	background-image: url("ptrbackground.jpg");
+	background-repeat:repeat-x;
 	color: #666666;
 	background-color:#00569f; 
 	font-family: Arial, Helvetica, sans-serif;
@@ -155,7 +156,7 @@ dt {
 
 /* Footer */
 footer{
-	 background:white;
+	background:white;
 	font-family: Georgia, "Times New Roman", serif; 
 	padding-left:20px;
 	grid-area:footer;
